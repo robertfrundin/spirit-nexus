@@ -1,0 +1,65 @@
+.card {
+  background-color: white;
+  border-radius: 0.75rem;
+  transition: all 0.2s ease-in-out;
+  overflow: hidden;
+}
+
+.default {
+  background-color: white;
+  border: 1px solid #e5e7eb;
+}
+
+.outlined {
+  background-color: white;
+  border: 2px solid #e5e7eb;
+}
+
+.elevated {
+  background-color: white;
+  border: none;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+
+  &:hover {
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  }
+}
+
+.padding-none {
+  padding: 0;
+}
+
+.padding-small {
+  padding: 0.75rem;
+}
+
+.padding-medium {
+  padding: 1.5rem;
+}
+
+.padding-large {
+  padding: 2rem;
+}
+
+@media (prefers-color-scheme: dark) {
+  .card {
+    background-color: #1f2937;
+    color: #e5e7eb;
+  }
+
+  .default,
+  .outlined {
+    border-color: #374151;
+  }
+
+  .elevated {
+    background-color: #1f2937;
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.3), 0 1px 2px 0 rgba(0, 0, 0, 0.2);
+
+    &:hover {
+      box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.3), 0 2px 4px -1px rgba(0, 0, 0, 0.2);
+    }
+  }
+}
+
+

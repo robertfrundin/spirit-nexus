@@ -1,0 +1,183 @@
+.notificationWrapper {
+  animation: slideIn 0.3s ease-out;
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.spiritCard {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+
+  &:hover {
+    transform: translateY(-2px);
+  }
+}
+
+.header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.name {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin: 0;
+  color: #111827;
+  line-height: 1.4;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.infoItem {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.875rem;
+}
+
+.label {
+  font-weight: 500;
+  color: #6b7280;
+  min-width: 70px;
+}
+
+.value {
+  color: #111827;
+  font-weight: 400;
+}
+
+.description {
+  margin: 0;
+  font-size: 0.875rem;
+  line-height: 1.6;
+  color: #4b5563;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.footer {
+  margin-top: auto;
+  padding-top: 0.5rem;
+  border-top: 1px solid #e5e7eb;
+}
+
+.footerButton {
+  width: 100%;
+  min-height: 2.5rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  
+  @media (max-width: 768px) {
+    min-height: 2.25rem;
+    font-size: 0.9375rem;
+    padding: 0.5rem 0.875rem;
+  }
+  
+  @media (max-width: 480px) {
+    min-height: 2rem;
+    font-size: 0.875rem;
+    padding: 0.4375rem 0.75rem;
+    font-weight: 600;
+  }
+}
+
+.capturedBadge {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5rem;
+  background-color: #d1fae5;
+  color: #065f46;
+  border-radius: 0.5rem;
+  font-weight: 600;
+  font-size: 0.875rem;
+}
+
+.active {
+  color: #059669;
+  font-weight: 500;
+}
+
+.captured {
+  color: #10b981;
+  font-weight: 600;
+}
+
+.spiritCard[data-threat-level='low'] {
+  border-left: 4px solid #10b981;
+}
+
+.spiritCard[data-threat-level='medium'] {
+  border-left: 4px solid #f59e0b;
+}
+
+.spiritCard[data-threat-level='high'] {
+  border-left: 4px solid #f97316;
+}
+
+.spiritCard[data-threat-level='extreme'] {
+  border-left: 4px solid #ef4444;
+}
+
+@media (prefers-color-scheme: dark) {
+  .name {
+    color: #f9fafb;
+  }
+
+  .value {
+    color: #e5e7eb;
+  }
+
+  .label {
+    color: #9ca3af;
+  }
+
+  .description {
+    color: #d1d5db;
+  }
+
+  .footer {
+    border-top-color: #374151;
+  }
+
+  .capturedBadge {
+    background-color: #064e3b;
+    color: #6ee7b7;
+  }
+
+  .active {
+    color: #6ee7b7;
+  }
+
+  .captured {
+    color: #10b981;
+  }
+}
+

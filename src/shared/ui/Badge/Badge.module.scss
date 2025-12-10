@@ -1,0 +1,57 @@
+.badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.25rem 0.75rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  line-height: 1;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  border-radius: 9999px;
+  white-space: nowrap;
+}
+
+.low {
+  background-color: #d1fae5;
+  color: #065f46;
+}
+
+.medium {
+  background-color: #fef3c7;
+  color: #92400e;
+}
+
+.high {
+  background-color: #fed7aa;
+  color: #9a3412;
+}
+
+.extreme {
+  background-color: #fee2e2;
+  color: #991b1b;
+}
+
+@media (prefers-color-scheme: dark) {
+  .low {
+    background-color: #064e3b;
+    color: #6ee7b7;
+  }
+
+  .medium {
+    background-color: #78350f;
+    color: #fde68a;
+  }
+
+  .high {
+    background-color: #7c2d12;
+    color: #fdba74;
+  }
+
+  .extreme {
+    background-color: #7f1d1d;
+    color: #fca5a5;
+  }
+}
+
+
